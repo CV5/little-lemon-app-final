@@ -20,8 +20,6 @@ struct LocationsView: View {
             .padding([.top, .bottom], 8)
             .background(Color.gray.opacity(0.2))
             .cornerRadius(20)
- 
-
             NavigationView {
                 List(model.restaurants, id: \.self) {restaurant in        NavigationLink(destination:ReservationForm(restaurant)){                 RestaurantView(restaurant)
                     }

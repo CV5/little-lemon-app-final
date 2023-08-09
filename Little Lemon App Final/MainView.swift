@@ -15,7 +15,7 @@ struct MainView: View {
 
     var body: some View {
         TabView (selection: $model.tabViewSelectedIndex){
-            // A view of restaurants and his location, each of which can be clicked to navigate to a reservation form for that restaurant
+            // A view of restaurants and his location, each of which can be clicked to navigate to a reservation form for that restaurant.
             LocationsView()
                 .tag(0)
                 .tabItem {
@@ -23,7 +23,7 @@ struct MainView: View {
                         Label("Locations", systemImage: "fork.knife")
                     }
                 }
-            // Reservation view shows information about a reservation or that there is no reservation yet
+            // Reservation view shows information about a reservation or that there is no reservation yet.
             ReservationView()
                 .tag(1)
                 .tabItem {
@@ -33,7 +33,6 @@ struct MainView: View {
                 }
         }
         .environmentObject(model)
-
     }
 }
 
